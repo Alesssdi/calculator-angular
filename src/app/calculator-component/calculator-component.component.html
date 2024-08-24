@@ -1,0 +1,18 @@
+
+
+<app-display-component ></app-display-component>
+
+
+
+<div class="oper_btn">
+    <app-add-button-component (buttonClick)="onButtonClick($event)"></app-add-button-component>
+    <app-subtract-button-component (buttonClick)="onButtonClick($event)"></app-subtract-button-component>
+    <app-divide-button-component (buttonClick)="onButtonClick($event)"></app-divide-button-component>
+    <app-multiply-button-component (buttonClick)="onButtonClick($event)"></app-multiply-button-component>
+    <button class="calc_btn calc_btn_c btn_gr" (click)="clear()">C</button>
+    <button class="calc_btn calc_btn_ce btn_gr" (click)="clearEntry()">&larr;</button>
+</div>
+
+<app-number-button-component (buttonClick)="onButtonClick($event)" (calculateClick)="calculate()">
+    <button class="calc_btn btn_blue calculate_btn" (click)="calculate()">=</button>
+</app-number-button-component>

@@ -1,0 +1,111 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    
+    font-family: "Cinzel", serif;
+    
+}
+
+app-calculator-component {
+    max-width: 700px;
+    margin: 10vh auto;
+    background-color: #c2c2c2;
+    border-radius: 10px;
+    padding: 60px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.calc_btn {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    box-shadow: 0 4px 16px #c9ccd3;
+    transition: all 300ms ease;
+} 
+
+.calc_btn:hover {
+    background-color: rgba(255, 255, 255, 0.507);
+}
+
+.input {
+    grid-column: 1/-1;
+    height: 70px;
+    border: none;
+    font-size: 25px;
+    margin-bottom: 10px;
+    border:none;
+}
+
+#input:focus{
+    outline: none;
+    box-shadow: 0 0 10px rgba(27, 78, 104, 0.849); 
+}
+
+.oper_btn {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 10px;
+}
+
+app-number-button-component{
+    grid-column: 1/-1;
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+app-number-button-component> button{
+    flex-basis: calc(33.333% - 10px);
+    margin-top: 10px;
+}
+app-display-component{
+    grid-column: 1/-1;
+}
+app-display-component>input{
+    width: 100%;
+}
+
+.oper_btn{
+    & button{
+        padding: 0;
+    }
+}
+
+.oper_btn .calc_btn,
+app-add-button-component,
+app-subtract-button-component,
+app-divide-button-component,
+app-multiply-button-component {
+    width: 100%;
+    height: 45px;
+}
+
+
+.calc_btn {
+    height: 70px;
+}
+
+
+.btn_blue {
+    background-color: #478891;
+    color: white;
+}
+
+.btn_blue:hover {
+    background-color: #397077;
+
+}
+
